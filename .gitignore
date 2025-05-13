@@ -1,0 +1,6 @@
+.env
+21.txt
+*.log
+__pycache__/
+node_modules/21.txt
+.env

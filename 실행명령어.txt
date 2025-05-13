@@ -1,0 +1,2 @@
+cd C:\Users\CHERRY\discord-bot
+"C:\Users\CHERRY\AppData\Local\Programs\Python\Python313\python.exe" bot.py
