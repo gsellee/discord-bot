@@ -57,7 +57,8 @@ async def on_message(message):
     name="purge",
     description="메시지를 일괄 삭제합니다 (최대 100개)"
 )
-@app_commands.describe(amount="삭제할 메시지의 개수를 입력하세요 (1~100)")
+@app_commands.describe(amount="삭제할 메시지의 개수를 입력하세요 (1~1000)")
+@app_commands.checks.has_permissions(manage_messages=True)
 async def purge(interaction: discord.Interaction, amount: int):
     if amount < 1 or amount > 100:
         await interaction.response.send_message(
