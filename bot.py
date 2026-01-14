@@ -60,9 +60,9 @@ async def on_message(message):
 @app_commands.describe(amount="삭제할 메시지의 개수를 입력하세요 (1~1000)")
 @app_commands.checks.has_permissions(manage_messages=True)
 async def purge(interaction: discord.Interaction, amount: int):
-    if amount < 1 or amount > 100:
+    if amount < 1 or amount > 1000:
         await interaction.response.send_message(
-            "⚠️ 1개에서 100개 사이의 숫자를 입력해주세요.",
+            "⚠️ 1개에서 1000개 사이의 숫자를 입력해주세요.",
             ephemeral=True
         )
         return
